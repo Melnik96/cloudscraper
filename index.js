@@ -81,6 +81,11 @@ function performRequest(options, callback) {
   }
 
   options.headers['User-Agent'] = options.headers['User-Agent'] || UserAgent;
+  
+  if(options.jar) {
+    jar = options.jar
+      console.log('jar = options.jar')
+  }
 
   makeRequest(options, function(error, response, body) {
     var validationError;
